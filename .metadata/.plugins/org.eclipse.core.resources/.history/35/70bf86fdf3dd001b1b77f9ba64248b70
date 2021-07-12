@@ -1,0 +1,30 @@
+package exam;
+
+import java.util.Scanner;
+
+public class Q17 {
+
+	public static void main(String[] args) {
+		String str[] = { "가위", "바위", "보" };
+		Scanner scan = new Scanner(System.in);
+		String user;
+		int i;
+		System.out.println("컴퓨터와 가위 바위 보 게임을 합니다.");
+		
+		do {
+			System.out.println("가위 바위 보! >> ");
+			user = scan.next();
+			if(user.equals("그만")) {
+				break;
+			}
+			i = (int)(Math.random()*3);
+			if(user.equals("가위")) {
+				if(str[i].equals("가위")){
+					System.out.println("사용자 = " + user + ", 컴퓨터 = " + str[i]);
+				}
+			}
+		}while(true);
+
+	}
+
+}

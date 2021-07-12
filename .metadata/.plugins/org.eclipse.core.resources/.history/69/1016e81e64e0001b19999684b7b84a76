@@ -1,0 +1,10 @@
+package scheduler_LYJ;
+
+import java.io.IOException;
+
+public class SchedulerTest {
+
+	public static void main(String[] args)  throws IOException {
+		System.out.println("전화 상담 할당 방식 선택");
+	}
+}

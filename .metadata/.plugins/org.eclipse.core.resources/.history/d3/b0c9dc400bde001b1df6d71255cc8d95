@@ -1,0 +1,7 @@
+package inheritanse2;
+
+public class Person {
+	
+	protected int age, height;
+	public String name;
+}

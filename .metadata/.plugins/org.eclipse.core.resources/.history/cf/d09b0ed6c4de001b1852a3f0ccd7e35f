@@ -1,0 +1,7 @@
+package upcasting;
+
+public class Student extends Person {
+	
+	
+
+}

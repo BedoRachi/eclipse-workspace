@@ -1,0 +1,17 @@
+package gameLevel_TDD;
+
+public class Player {
+	
+	public Player() {
+		
+	}
+	
+	public void go(int count) {
+		
+	}
+	
+	public void play(int count) {
+		
+	}
+
+}

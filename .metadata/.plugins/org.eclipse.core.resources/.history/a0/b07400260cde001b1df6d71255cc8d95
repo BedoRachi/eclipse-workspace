@@ -1,0 +1,10 @@
+package inheritanse2;
+
+public class Student extends Person {
+
+	age = 30;
+	name = "ȫ�浿";
+	height = "175";
+	setWeight(175);
+	
+}

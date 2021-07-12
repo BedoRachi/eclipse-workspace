@@ -1,0 +1,35 @@
+package array;
+
+public class ArrayTest {
+	
+	public static void main(String[] args) {
+		int[] num = new int[10];
+		int total=0;
+		
+		for(int i=0; i < 10; i++ ) {
+			num[i] = i;
+			total += num[i];
+		}
+		for(int j=0; j < 10; j++ ) {
+			System.out.println(num[j] + " " + total);
+		}
+		
+		System.out.println(num.length);
+	}
+
+}
+
+/*
+ * °á°ú°ª 
+ * 0 45 
+ * 1 45 
+ * 2 45 
+ * 3 45 
+ * 4 45 
+ * 5 45 
+ * 6 45 
+ * 7 45 
+ * 8 45 
+ * 9 45
+ * 10
+ */

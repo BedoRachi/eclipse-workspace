@@ -1,0 +1,24 @@
+package chapter05;
+
+public class Book {
+
+	String title;
+	String name;
+	
+	public Book(String t) {
+		if(t=="춘향전")
+			name="작자미상";
+		else if(t=="어린왕자")
+			name="생텍쥐페리";
+		else if(t=="난중일기")
+			name="이순신";
+		else if(t=="자바프로그래밍 입문")
+			name="박은종";
+	}
+	public Book(String t, String n) {
+		title = t;
+		name = n;
+	}
+
+	
+}

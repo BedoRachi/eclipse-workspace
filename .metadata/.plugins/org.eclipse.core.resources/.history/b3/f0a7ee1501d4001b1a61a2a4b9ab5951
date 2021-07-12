@@ -1,0 +1,20 @@
+package chapter05;
+
+public class Loop_For_Example02 {
+
+	public static void main(String[] args) {
+		
+		int dan;
+		int soo;
+		int temp=0;
+		
+		for(dan=1; dan < 10 ; dan++) {
+			System.out.println(dan + "´Ü °öÇÏ±â(~9)");
+			for(soo=1; soo < 10; soo++) {
+				temp=dan * soo;
+				System.out.println(dan + " X " + soo + " = " + temp);
+			}
+		}
+	}
+
+}

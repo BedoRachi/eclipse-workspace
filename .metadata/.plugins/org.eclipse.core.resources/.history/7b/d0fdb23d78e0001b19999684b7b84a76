@@ -1,0 +1,6 @@
+package interfaceex_LYJ;
+
+public interface Buy {
+	void buy();
+
+}

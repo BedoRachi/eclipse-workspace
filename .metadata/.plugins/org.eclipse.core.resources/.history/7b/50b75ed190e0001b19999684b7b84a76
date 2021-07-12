@@ -1,0 +1,18 @@
+package chapter9_LYJ.copy;
+
+import java.util.ArrayList;
+
+public class CarTest {
+	public static void main(String[] args) {
+		ArrayList<Car> carList = new ArrayList<Car>();
+		carList.add(new Sonata()); // 업캐스팅
+		carList.add(new Grandeur()); // 업캐스팅
+		carList.add(new Avante()); // 업캐스팅
+		carList.add(new Genesis()); // 업캐스팅
+		for(int i=0;i<carList.size();i++) {
+			
+			System.out.println("=====================");
+		}
+	}
+
+}

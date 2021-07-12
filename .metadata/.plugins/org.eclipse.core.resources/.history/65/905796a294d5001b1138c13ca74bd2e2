@@ -1,0 +1,18 @@
+package chapter05;
+
+public class Book {
+
+	String title;
+	String name;
+	
+	public Book(String t) {
+		title = t;
+		name = "작자미상";
+	}
+	public Book(String t, String n) {
+		title = t;
+		name = n;
+	}
+
+	
+}

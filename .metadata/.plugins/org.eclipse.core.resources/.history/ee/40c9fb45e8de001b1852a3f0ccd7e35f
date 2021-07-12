@@ -1,0 +1,29 @@
+package overriding;
+
+class Shape {
+	public Shape next;
+
+	public Shape() {
+		next = null;
+	}
+
+	public void draw() {
+		System.out.println("shape");
+	}
+}
+
+class Line extends Shape { //상속
+	public void draw() { //메소드 재정위
+		System.out.println("Line");
+	}
+}
+
+class Rect
+
+public class OervrridingEx {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package chapter9_LYJ;
+
+public class Car {
+	
+	Car car;
+	
+	public void add(Car car) {
+		this.car = car
+	}
+}

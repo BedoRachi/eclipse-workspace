@@ -1,0 +1,18 @@
+package chapter05;
+
+public class If_Example04 {
+
+	public static void main(String[] args) {
+		int age = 9;
+		int charge;
+		
+		if(age <8) {
+			charge = 1000;
+			System.out.println("입장료는 " + charge + "원 입니다. 취학 아동");
+		}
+		else {
+			charge = 2000;
+			System.out.println("입장료는 "+ charge +"원 입니다. 취학 아동" )
+		}
+	}
+}

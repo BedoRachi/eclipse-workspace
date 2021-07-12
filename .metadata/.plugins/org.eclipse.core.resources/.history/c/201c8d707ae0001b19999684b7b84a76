@@ -1,0 +1,22 @@
+package interfaceex_LYJ;
+
+public class CustomerTest {
+
+	public static void main(String[] args) {
+		Customer customer = new Customer();
+		
+		Buy buyer = customer; // 업캐스팅
+		buyer.buy(); // = customer.buy();
+		buyer.order(); //  = customer.order(); -> 재정의한 order()가 출력됨
+		
+		Sell seller = customer; // 업캐스팅
+		seller.sell(); // = customer.sell();
+		seller.order(); //  = customer.order();  -> 재정의한 order()가 출력됨
+		
+		if(seller instanceof Customer) {//다운캐스팅 전 검사
+			Customer customer2 =(Customer)seller; // 다운캐스팅
+			customer2.buy(); // = seller.buy();
+			customer2.sell(); // = seller.sell();
+		}
+	}
+}

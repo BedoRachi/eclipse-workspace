@@ -1,0 +1,17 @@
+package chapter02;
+
+public class Constant {
+
+	public static void main(String[] args) {
+		final int MAX_NUM = 100; //상수 선언 후 값 할당
+		final int MIN_NUM; // 상수 선언만 함
+		
+		MIN_NUM = 10; //선언만 한 상수는 필요시 값 할당이 가능
+
+		MIN_NUM = 0;
+		
+		System.out.println(MAX_NUM);
+		System.out.println(MIN_NUM);
+		
+	}
+}

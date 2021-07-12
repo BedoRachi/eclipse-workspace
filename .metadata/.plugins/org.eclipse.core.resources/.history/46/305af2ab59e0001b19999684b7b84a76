@@ -1,0 +1,14 @@
+package chapter9_LYJ;
+
+public class Car {
+	
+	H car;
+	
+	public void add(H car) {
+		this.car = car;
+	}
+	
+	public void test() {
+		car.run();
+	}
+}

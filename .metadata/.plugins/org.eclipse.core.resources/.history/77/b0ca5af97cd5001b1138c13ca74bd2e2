@@ -1,0 +1,23 @@
+package chapter05;
+
+import java.util.Scanner;
+
+public class Order_Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Order order = new Order();
+		
+		System.out.println("주문번호, 아이디, 날짜, 이름, 상품번호, 배송주소를 순차적으로 입력하시오");
+		order.orderNum = scan.nextInt();
+		order.orderID = scan.next();
+		order.orderDay = scan.next();
+		order.orderName = scan.next();
+		order.orderSerial = scan.next();
+		order.orderPost = scan.next();
+		
+		System.out.println("주문번호: "+ order.orderNum+" 아이디: "+order.orderID+" 날짜: "+order.orderDay+" 이름: "+order.orderName+" 상품번호: "+order.orderSerial+" 배송주소: "+order.orderPost);
+
+	}
+
+}

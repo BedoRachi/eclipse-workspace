@@ -1,0 +1,23 @@
+package abstractEx;
+
+public class GoodCal extends Caculator {
+
+	@Override
+	public int add(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int subtract(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double average(int[] a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

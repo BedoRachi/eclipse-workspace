@@ -1,0 +1,8 @@
+package chapter05;
+
+public class Order {
+
+	Long orderNum;
+	String orderID, orderDay, orderName, orderSerial, orderPost;
+	
+}

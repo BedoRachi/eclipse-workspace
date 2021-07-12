@@ -1,0 +1,24 @@
+package overriding2;
+
+class Shape1 {
+	protected String name;
+
+	public void paint() {
+		draw();
+	}
+
+	public void draw() {
+		System.out.println("Shape");
+	}
+}
+
+public class Circle extends Shape1 {
+
+	public static void main(String[] args) {
+
+		Shape a = new Shape();
+		a.paint();
+
+	}
+
+}

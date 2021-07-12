@@ -1,0 +1,16 @@
+package chapter05;
+
+public class Loop_For_Example01 {
+
+	public static void main(String[] args) {
+		int i;
+		int sum;
+		
+		for(i=1, sum=0; sum <10000; i++ ) {
+			sum+=i;
+			System.out.println("안녕하세요"+ i + "번째 실행입니다.");
+		}
+		System.out.println(i);
+	}
+}
+

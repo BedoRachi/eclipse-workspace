@@ -1,0 +1,11 @@
+package inheritance;
+
+public class ColorPointEx {
+
+	public void main(String[] args) {
+		
+		Point p = new Point ();
+		p.set(0, 0);
+		p.showPoint();
+	}
+}

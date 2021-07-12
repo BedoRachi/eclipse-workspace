@@ -1,0 +1,15 @@
+package instanceofex;
+
+class Person{}
+class Student extends Person{}
+class Resercher extends Person{}
+class Professor extends Resercher{}
+
+public class InstanceOfEx {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

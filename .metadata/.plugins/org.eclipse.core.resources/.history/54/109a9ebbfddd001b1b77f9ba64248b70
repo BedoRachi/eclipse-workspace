@@ -1,0 +1,19 @@
+package inheritance;
+
+public class Point {
+
+	private int x, y; // child class에서 접근 불가
+	public int x1; // child class 에서 접근 가능
+	int y1;  // child class 에서 접근 가능
+	
+	public void set(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void showPoint() {
+		System.out.printf("( %s : %s ) \n", x, y);
+	}
+	
+	
+}

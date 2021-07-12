@@ -1,0 +1,9 @@
+package p;
+
+public class B extends A {
+	
+	void set() {
+		pub =1;
+	}
+
+}

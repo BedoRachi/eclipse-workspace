@@ -1,0 +1,10 @@
+package upcasting;
+
+public class DowncastingEx {
+
+	public static void main(String[] args) {
+		
+		Person p = new Student("ÀÌ¼ø½Å");
+	}
+
+}

@@ -1,0 +1,17 @@
+package polymorphism;
+
+import java.util.ArrayList;
+
+class Animal {
+	public void move() {
+		sysout
+	}
+}
+
+public class AnimalTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

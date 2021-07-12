@@ -1,0 +1,15 @@
+package chapter05;
+
+public class Book_Test {
+	
+	public static void main(String[] args) {
+		
+		Book b1 = new Book("춘향전");
+		Book b2 = new Book("어린왕자", "생텍쥐페리");
+		
+		System.out.println("책이름: " + b1.title + " 저자: " + b1.name);
+		System.out.println("책이름: " + b2.title + " 저자: " + b2.name);
+		
+	}
+
+}

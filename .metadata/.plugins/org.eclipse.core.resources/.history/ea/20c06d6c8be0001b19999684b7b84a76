@@ -1,0 +1,8 @@
+package sorting;
+
+public interface Sort {
+	
+	public void ascending(int[]) {
+		
+	}
+}

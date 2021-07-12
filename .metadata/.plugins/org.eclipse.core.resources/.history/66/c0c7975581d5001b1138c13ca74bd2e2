@@ -1,0 +1,27 @@
+package chapter05;
+
+public class Order {
+
+	Long orderNum;
+	String orderID, orderDay, orderName, orderSerial, orderPost;
+	
+	public long GetOrderNum() {
+		return orderNum;
+	}
+	public String GetOrderID() {
+		return orderID;
+	}
+	public String GetOrderDay() {
+		return orderDay;
+	}
+	public String GetOrderName() {
+		return orderName;
+	}
+	public String GetOrderSerial() {
+		return orderSerial;
+	}
+	public String GetOrderPost() {
+		return orderPost;
+	}
+
+}

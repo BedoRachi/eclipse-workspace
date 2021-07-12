@@ -1,0 +1,19 @@
+package chapter05;
+
+public class Loop_Example01 {
+
+	public static void main(String[] args) {
+		
+		int num=1;
+		int sum=0;
+		
+		while(num < 51){
+			sum += num;
+			num++;
+		}
+		
+		System.out.println("0~50의 합은" + sum + "입니다.");
+		
+	}
+
+}
