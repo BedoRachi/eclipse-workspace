@@ -1,8 +1,9 @@
 package bookshelf_LYJ;
 
 public class BookShelf extends Shelf implements Queue {
+	//Shelf와 Queue를 동시에 상속 받음
+	//shelf가 상속되어 있기 때문에 BookShelf 생성(new)시 Shelf ArrayList또한 생성된다.
 	
-	//shelf가 상속되어 있기 때문에 BookSehl 생성(new)시 Shelf ArrayList또한 생성된다.
 	@Override
 	public void enQueue(String title) {
 		shelf.add(title); //shlef Class의 shelf ArrayList를 사용

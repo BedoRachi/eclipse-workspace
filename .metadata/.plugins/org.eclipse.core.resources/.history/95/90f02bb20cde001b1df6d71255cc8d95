@@ -1,9 +1,0 @@
-package inheritanse2;
-
-public class inheritanceEx {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}

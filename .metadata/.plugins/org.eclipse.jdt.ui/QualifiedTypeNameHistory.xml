@@ -13,7 +13,8 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="template.car"/>
     <fullyQualifiedTypeName name="template.car.Car"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="finalex.Define"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.ReflectiveOperationException"/>
 </qualifiedTypeNameHistroy>

@@ -1,9 +1,0 @@
-package inheritance4;
-
-public class ConstructorEx02 {
-	
-	public static void main(String[] args) {
-		
-	}
-
-}

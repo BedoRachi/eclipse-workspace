@@ -12,13 +12,13 @@ public interface Calc {
 	int divide(int num1, int num2);
 	int square(int num);
 
-	// 디폴트 메소드(default method)
+	// 디폴트 메소드(default method) :interface구현 하여 추가적인 재정의 없이 사용가능하게 함
 	default void description() {
 		System.out.println("정수 계산기 입니다.");
 		myMethod(); //private 메소드
 	}
 
-	// 정적 메소드(Static Method)
+	// 정적 메소드(Static Method) :Class 호출이 없더라도 사용 가능함
 	static int total(int[] arr) {
 		int total = 0;
 		for (int i : arr) {
@@ -28,7 +28,7 @@ public interface Calc {
 		return total;
 
 	}
-	//private 메소드
+	//private 메소드 : 재정의 불가하게 함
 	private void myMethod() {
 		System.out.println("private 메소드");
 	}
