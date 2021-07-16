@@ -1,9 +1,0 @@
-package abstractEx;
-
-public abstract class Computer { //추상 클래스
-
-	abstract public void display(); // 추상메소드 (선언O/구현X)
-	public abstract void typing(); // 추상메소드 (선언O/구현X)
-	
-	
-}

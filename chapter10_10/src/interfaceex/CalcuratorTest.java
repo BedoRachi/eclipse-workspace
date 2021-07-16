@@ -13,5 +13,6 @@ public class CalcuratorTest {
 		System.out.println(calc.divide(num1, num2));
 		CompleteCalc calc2 = (CompleteCalc)calc;
 		calc2.showInfo();
+
 	}
 }

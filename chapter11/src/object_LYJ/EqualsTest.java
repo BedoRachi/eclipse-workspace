@@ -8,14 +8,20 @@ class Student {
 		this.id = id;
 		this.name = name;
 	}
-
+	
+	@Override
+	public int hashCode() { //hashCode 재정의(주소값 -> id 출력)(=주소(hash) 비교 대신 값(id) 비교를 위해서 재정의
+		return id;
+	}
+	
 	@Override
 	public String toString() { // toString 재정의(hash값 출력 -> id,name 출력)
-		return id + ", " + name;
+		return id + ", " + name; //hashCode가 재정의 되었으므로 toString 도 재정의 필요
 	}
 
 	@Override
-	public boolean equals(Object obj) {// equals 재정의(주소값만 검사 -> id 검사)
+	public boolean equals(Object obj) {// equals 재정의(주소값 검사 -> id 검사)
+		//hashCode가 재정의 되었으므로 toString 도 재정의 필요
 		if (obj instanceof Student) {
 			Student std = (Student) obj;
 			if (this.id == std.id) {
@@ -26,10 +32,7 @@ class Student {
 		} else
 			return false;
 	}
-	public int hashCode() { //hashCode 재정의(주소값 -> id 출력)
-		return id;
-	}
-
+	
 }
 
 public class EqualsTest {

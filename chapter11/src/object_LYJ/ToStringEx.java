@@ -8,11 +8,10 @@ class Book {
 		this.bookNumber = bookNumber;
 		this.bookTitle = bookTitle;
 	}
-	@Override
-	public String toString() { //Object Class의 toString을 재정의
-		return bookTitle + " ; " + bookNumber;
-	}
-	
+	/*
+	 * @Override public String toString() { //Object Class의 toString을 재정의 return
+	 * bookTitle + " ; " + bookNumber; }
+	 */	
 }
 public class ToStringEx{
 	public static void main(String[] args) {

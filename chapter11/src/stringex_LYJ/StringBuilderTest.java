@@ -2,7 +2,7 @@ package stringex_LYJ;
 
 public class StringBuilderTest {
 	public static void main(String[] args) {
-		String javaStr = new String("java");
+		String javaStr = new String("java"); 
 		System.out.println("연산전 javaStr 주소: " + System.identityHashCode(javaStr)); //String의 주소값
 		
 		StringBuilder buffer = new StringBuilder(javaStr);
