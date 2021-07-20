@@ -1,6 +1,0 @@
-package interfaceex_LYJ;
-
-public interface Sell {
-
-	public void sell();
-}

@@ -1,7 +1,0 @@
-package interfaceex_LYJ;
-
-public interface Buy {
-	
-	protected void buy();
-
-}

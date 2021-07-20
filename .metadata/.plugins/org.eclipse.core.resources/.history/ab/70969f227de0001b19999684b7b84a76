@@ -1,5 +1,0 @@
-package bookshelf_LYJ;
-
-public interface BookShelf extends Shelf implement Queue{
-
-}

@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="clone"/>
+		<item key="selection" value="TreeMap"/>
 		<list key="findhistory">
+			<item value="HashMap"/>
 			<item value="clone"/>
 			<item value="Powder"/>
 			<item value="equals"/>
@@ -21,6 +22,7 @@
 			<item value=" || (num2&gt;0)"/>
 		</list>
 		<list key="replacehistory">
+			<item value="TreeMap"/>
 			<item value="Plastic"/>
 			<item value="재정의된 toString으로 출력됨(hash값 출력 -&gt;id,name 출력)"/>
 			<item value="Taxi"/>

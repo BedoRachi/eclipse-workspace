@@ -1,6 +1,6 @@
 package collection.arrayList;
 
-import java.util.ArrayList;
+import java.util.ArrayList; //ArrayList Import
 import collection.Member;
 
 public class MemberArrayList {
