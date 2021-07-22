@@ -21,8 +21,8 @@ public class ExceptionHandling3 {
 				} catch (IOException e){ //stream close Error 대한 예외처리
 					e.printStackTrace(); // Error가 발생한 특정 Stream을 역추척하여 출력한다..
 				}
-				System.out.println("항상 실행");
 			}
+			System.out.println("항상 실행");
 		}
 		System.out.println("여기도 수행");
 	}

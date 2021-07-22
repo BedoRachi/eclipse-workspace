@@ -34,7 +34,7 @@ public class TravelCustomer {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
+	@Override
 	public String toString() {
 		return "name: " + name + " age: " + age + " price: " + price;
 	}
