@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="TreeMap"/>
+		<item key="selection" value="num"/>
 		<list key="findhistory">
+			<item value="num"/>
 			<item value="HashMap"/>
 			<item value="clone"/>
 			<item value="Powder"/>
