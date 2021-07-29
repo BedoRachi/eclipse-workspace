@@ -1,0 +1,283 @@
+
+
+=========================================================
+package chapter4;
+
+public class Q1If {
+
+	public static void main(String[] args) {
+		int num1 = 10;
+		int num2 = 2;
+		char operator = '+';
+		
+		int result = 0;
+		
+		if(operator == '+') {
+			result = num1 + num2;
+		}
+		else if(operator == '-') {
+			result = num1 - num2;
+		}
+		else if(operator == '*') {
+			result = num1 * num2;
+		}
+		else if(operator == '/') {
+			result = num1 / num2;
+		}
+		else {
+			System.out.println("연산자 오류입니다");
+			return;
+		}
+		System.out.println("결과 값은 " + result + "입니다");
+	}
+}
+=======================================================
+
+package chapter4;
+
+public class Q1Switch {
+
+	public static void main(String[] args) {
+		int num1 = 10;
+		int num2 = 2;
+		char operator = '*';
+		int result = 0;
+		
+		switch(operator) {
+			case '+':
+				result = num1 + num2;
+				break;
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			default:
+				System.out.println("연산자 오류입니다");
+				return;
+		}
+		System.out.println("결과 값은 " + result + "입니다");
+	}
+
+}
+=========================================================
+
+Q1 스캐너 사용한 경우 ( IF )
+
+package chapter4;
+
+import java.util.Scanner;
+
+public class Q1If {
+
+	public static void main(String[] args) {
+		int num1 = 10;
+		int num2 = 2;
+		
+		System.out.println("연산자를 넣어 주세요");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		String S = scanner.next();			// 문자 열로 입력 받은 다음 첫 번째 글짜만 뽑아옴(index 0) 
+		char operator = S.charAt(0);
+		System.out.println(operator);
+		
+		int result = 0;
+		
+		if(operator == '+') {
+			result = num1 + num2;
+		}
+		else if(operator == '-') {
+			result = num1 - num2;
+		}
+		else if(operator == '*') {
+			result = num1 * num2;
+		}
+		else if(operator == '/') {
+			result = num1 / num2;
+		}
+		else {
+			System.out.println("연산자 오류입니다");
+			scanner.close();
+			return;
+		}
+		System.out.println("결과 값은 " + result + "입니다");
+		
+		scanner.close();
+		
+	}
+
+}
+
+===========================================================
+
+
+Q1 스캐너 사용한 경우 ( switch )
+
+package chapter4;
+
+import java.util.Scanner;
+
+public class Q1_Switch {
+
+	public static void main(String[] args) {
+		
+		int num1 = 10;
+		int num2 = 2;
+		int result = 0;
+		
+		System.out.println("연산자를 넣어 주세요.");
+		Scanner scanner = new Scanner(System.in);
+		String S = scanner.next();
+		
+		char operator = S.charAt(0);
+
+		
+		switch(operator) {
+			case '+':
+				result = num1 + num2;
+				break;
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			default:
+				System.out.println("연산자 오류입니다");
+				scanner.close();
+				return;
+		}
+		System.out.println("결과 값은 " + result + "입니다");
+		scanner.close();
+	}
+
+}
+================================================================
+
+
+
+
+package chapter4;
+
+public class Q2 {
+
+	public static void main(String[] args) {
+
+		int dan;
+		int times;
+		
+		for(dan = 2; dan <=9; dan++){
+			if (dan %2 != 0) continue;
+			for(times = 1; times <=9; times++){
+				System.out.println(dan + "X" + times + "=" + dan * times);
+			}
+			System.out.println();
+		}
+	}
+}
+========================================================
+
+
+
+package chapter4;
+
+public class Q3 {
+
+	public static void main(String[] args) {
+		int dan;
+		int times;
+		
+		for(dan = 2; dan <=9; dan++){
+			for(times = 1; times <=9; times++){
+				if( times > dan) break;
+				System.out.println(dan + "X" + times + "=" + dan * times);
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+========================================================
+
+package chapter4;
+
+public class Q4 {
+
+	public static void main(String[] args) {
+
+		int lineCount = 4;  
+		int spaceCount = lineCount/2 +1;
+		int starCount = 1;
+		
+		for(int i = 0; i<lineCount; i++) {
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			for(int j=0; j<starCount; j++) {
+				System.out.print('*');
+			}
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			spaceCount-=1;
+			starCount+=2;
+			System.out.println();
+		}
+	}
+}
+
+
+
+=============================================
+
+
+package chapter4;
+
+public class Q5 {
+
+	public static void main(String[] args) {
+
+		int lineCount = 9;  //다른 홀수 값을 넣어보세요
+		int spaceCount = lineCount/2 +1;
+		int starCount = 1;
+		
+		for(int i = 0; i<lineCount; i++) {
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			for(int j=0; j<starCount; j++) {
+				System.out.print('*');
+			}
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			
+			if(i < lineCount/2) {
+				spaceCount-=1;
+				starCount+=2;
+			}
+			else {
+				spaceCount+=1;
+				starCount-=2;
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+==================================================
+
+
+
+

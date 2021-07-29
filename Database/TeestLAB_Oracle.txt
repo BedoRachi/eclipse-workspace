@@ -1,0 +1,2 @@
+conn hr/hr
+@c:\in\emp_example.sql
