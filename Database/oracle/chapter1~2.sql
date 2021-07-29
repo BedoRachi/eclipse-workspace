@@ -60,3 +60,42 @@ select * from employee where ename like '%A%';
 select * from employee where ename not like '%A%';
 select * from employee where ename like 'M_RT_N';
 
+/* 테이블 별 컬럼 속성 및 별칭 지정 */
+select 
+    eno 사원번호
+    ,ename 사원명
+    ,job 업무명
+    ,manager "상사 번호" --공백이 있으므로 ""로 묶음
+    ,hiredate 고용일
+    ,salary 급여
+    ,commission "보너스[커미션]" --특수문자가 있으므로 ""로 묶음
+    ,dno 부서번호
+from employee;
+
+select 
+    dno 부서번호
+    ,dname 부서명
+    ,loc 지역명
+from department;
+
+select
+    grade 급여등급
+    ,losal 급여하한가
+    ,hisal 급여상한가
+from salgrade;
+
+/* NULL 검색 방법 */
+--select ename, dno, commission from employee where commission=null; Error 발생, is를 사용해야함
+select ename, dno, commission from employee where commission is null; 
+select ename, dno, commission from employee where commission is not null;
+
+?/* 정렬해서 출략하기 order by {컬럼명} asc(or desc) */
+select * from employee order by salary asc; --오름차순 정렬
+select * from employee order by salary desc; --내림차순 정렬
+
+select * from employee order by ename asc; --오름차순 정렬
+select * from employee order by ename desc; --내림차순 정렬
+
+/* 여러 컬럼 정렬해서 출략하기 order by A, B */
+select * from employee order by salary desc, ename asc; -- A먼저 정렬 후 A가 동일한 값은 B 정렬
+select * from employee order by job asc, ename desc; -- A먼저 정렬 후 A가 동일한 값은 B 정렬
