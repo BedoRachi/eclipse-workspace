@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="num"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="System.in.read"/>
+			<item value="System.in.read()"/>
+			<item value="auto"/>
 			<item value="num"/>
 			<item value="HashMap"/>
 			<item value="clone"/>
@@ -20,7 +23,6 @@
 			<item value="operator == "/>
 			<item value="Integer.toBinaryString(result)"/>
 			<item value="Integer.toBinaryString(num2)"/>
-			<item value=" || (num2&gt;0)"/>
 		</list>
 		<list key="replacehistory">
 			<item value="TreeMap"/>
@@ -34,8 +36,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="228"/>
-		<item key="DIALOG_Y_ORIGIN" value="115"/>
+		<item key="DIALOG_X_ORIGIN" value="-249"/>
+		<item key="DIALOG_Y_ORIGIN" value="109"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
