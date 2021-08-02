@@ -2,35 +2,26 @@ package Weakly_Test1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.IOException;
-import java.util.StringTokenizer;
 
-public class Main {
+public class Main{
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n = Integer.parseInt(br.readLine());
-		int count =0;
-		int tmp=0;
-		int total=0;
-		while(true) {
-			if(n<10) {
-				tmp = n*10;
-			}else {
-				total=((tmp/10) + (tmp%10));
-			}
-			count++;
-			if(total == n) {
-				break;
-			} else {
-				tmp = (total%10)+((tmp%10)*10);
-			}	
+		int[] numArray = {0,0,0,0,0,0,0,0,0,0}; 
+		int total = Integer.parseInt(br.readLine())*Integer.parseInt(br.readLine())*Integer.parseInt(br.readLine());
+		while(total > 0) {
+			numArray[total%10] +=1; 
+			total/=10;
 		}
-		bw.write(count);
+		for(int i = 0; i< numArray.length; i++) {
+			bw.write(numArray[i] + "\n");
+		}
 		bw.flush();
-
+		bw.close();
+		br.close();
 		
 	}
 }
