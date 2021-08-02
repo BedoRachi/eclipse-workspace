@@ -39,4 +39,4 @@ from employee
 where salary < all ( select salary -- <ALL 이므로 최대값 보다 큼 / >ANY 일 경우 최소값 보다 작음(AND연산)
                     from employee  --job이 SALESMAN인 컬럼의 salary 보다 작은 salary의 eno, ename, job을 출력한다.
                     where job='SALESMAN')
-and job <> 'SALESMAN';
+and job <> 'SALESMAN'; --단 job이 SALESMAN이 아닌 사람만
