@@ -1,0 +1,96 @@
+/* Table 생성 */
+Create table dept(
+    dno number(2) not null,
+    dname varchar2(14) not null,
+    loc varchar2(13) null
+    );
+-- 컬럼명 자료형 NULL허용여부 순으로 입력한다.
+
+/* Table 구조 출력 */
+desc dept;
+
+/* 테이블 내용 출력 -> Null */
+select * from dept;
+
+/* 컬럼을 명시 하지 않고 삽입->형식이 맞다면 순차적으로 입력됨 */
+insert into dept values (1, 'hong', 'seoul');
+
+/* 컬럼을 명시하여 삽입 -> 컬럼에 맞춰 입력됨 */
+insert into dept (dno, dname, loc) values (2, 'kim', 'pusan');
+
+/* 컬럼을 일부만 삽입 -> 부족한 컬럼은 NULL 처리됨 */
+insert into dept (dno, dname) values (3, 'park');
+
+/* 테이블 내용 출력 -> 3개 출력*/
+select * from dept;
+
+--트랜잭션(Transaction) : DB의 최소 처리단위를 트랜잭션이라함
+    -- 데이터의 일관성 보장
+    -- ALL or Nothing : 전부 되거나 전부 안되거나 하는 방식의 처리
+    -- Oracle 은 DML 문이 실행될때 먼저 Memory에 적용하여 begin transection & Rollback을 지원하며
+    -- "commit;" 할 경우 DB에 저장하며 Commit한다.
+ 
+insert into dept (dno, dname, loc) values (4, 'son', 'taegu'); -- Treansaction Insert(Memeoy) 
+select * from dept; -- 삽입한 컬럼이 출력됨
+rollback; -- Last Commit으로 돌아감
+select * from dept;  -- 삽입한 컬럼이 없음
+insert into dept (dno, dname, loc) values (4, 'son', 'taegu'); -- Treansaction Insert(Memeoy) 
+commit; -- commit 완료(Memory ->DB)
+rollback;
+select * from dept; -- commit을 하였기 때문에 컬럼이 보임
+
+delete dept -- where가 없을 경우dept 테이블을 삭제
+where dno=3; -- where가 있을 경우 특정 데이터만 삭제함
+rollback; -- delete를 하지 않았으므로 Rollback됨
+
+/* Table 전체 복사 */
+create table dept_second
+as
+select * from department; --depeartment 모든 테이블을 불러와 dept_sccond 테이블을 생성
+select * from dept_second;
+
+/* Table 부분 복사 및 변경 */
+create table dept20
+as
+select eno, ename, salary * 12 annsal -- 테이블 복사시 테이블의 값을 변경할 경우 테이블명이 없어지기 때문에 반드시 별칭을 넣어야함  
+from employee
+where dno =20; --dno가 20 인 대상으로만 한다.
+
+/* Table 구조만 복사 */
+create table dept_third
+as
+select eno, ename -- 복사할 테이블을 선택
+from employee
+where 0=1; -- 거짓이 반환되므로 값없이 테이블만 복사함
+
+/* 테이블 수정(alter) */
+alter table dept20
+add(birth date); --컬럼 추가
+
+alter table dept20
+add(email varchar2(100)); --컬럼 추가
+
+alter table dept20
+add(Address varchar2(200)); --컬럼 추가(200자리 이내의 가변형 char)(성능이 다소 떨어지나 필요시에 공간을 할당하므로 낭비가 적음)
+
+alter table dept20
+add(Jumin char(13)); --컬럼 추가(13자리 이내의 char))(성능은 좋으나 공간을 선점하므로 낭비가 발생할 수 있음)
+
+desc dept20
+select * from dept20; --추가된 컬럼 확인
+
+/* 컬럼 자료형 변경 */
+alter table dept20
+modify  ename varchar2 (30); --ename 자료형을 변경
+
+/* 컬럼 제거 */
+alter table dept20
+drop column JUMIN; --JUMIN 컬럼을 제거
+
+-- SET UNUSED : 특정 컬럼을 비사용등록 하는 것으로 삭제시 많은 부하가 발생하므로 UNUSED->DELETE하여
+        --  자원이 충분할때 DELETE를 진행한다.
+alter table dept20
+set unused(eno);
+
+alter table dept20
+drop unused column;
