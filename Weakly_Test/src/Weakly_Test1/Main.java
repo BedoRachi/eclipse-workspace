@@ -1,29 +1,30 @@
 package Weakly_Test1;
 
+public class Main {
+	public static void main(String[] args) {
 
-public class Main{
-    public static void main(String[] args) {
-		boolean[] selfNum = new boolean[10001];
-    	for(int i=1; i<10000; i++) {
-    		if(10000>selfCount(i)) {
-    			selfNum[selfCount(i)] = true;
-    		}
-    	}
-    	for(int i=1; i<10000;i++) {
-    		if(selfNum[i]==false) {
-    			System.out.println(i);
-    		}
-    	}
+	}
 
-    }
-    
-    static int selfCount(int n) {
-    	int num = n;
-    	int sum = n;
-    	while(num !=0) {
-    		sum+=(num%10);
-    		num/=10;
-    	}
-    	return sum;
-    }
+	static int count(int n) {
+		int count = 0;
+		
+		for (int i = 1; i <= n; i++) {
+			if (n < 100) {
+				count++;
+			}
+			int preNum = 0;
+			int preGap = 0;
+			while (n != 0) {
+				preNum = n%10;
+				if(preGap <=0) {
+					preGap +=preNum;
+				} else {
+					preGap -=preNum;
+				}
+				n/=10;
+			}
+		}
+
+		return count;
+	}
 }
