@@ -1,0 +1,28 @@
+<!DOCTYPE html><!--!DOCTYPE : 문서의 종류를 정의--> 
+<html> <!--html : HTML 구문 영역--> 
+    <head> <!--head : HTML문서의 메타데이터 정의영역--> 
+        <!--meta : 사전정의 내용--> 
+        <meta charset = "utf-8"> <!--charset : 글자를 UTF-8로 사용--> 
+        <title> 외부파일 재생하기 </title><!--titme : 창의 명--> 
+    </head>
+
+    <body><!--body : HTML에서 눈에 보이는 부분을 작성하는 영역--> 
+        <embed src = "whitebird.swf" width= "171" height="141"> </embed>
+        <audio src = "evocation.mp3" autoplay controls loop> </audio>
+        <video width="320" height="240" autoplay controls></video>
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.webm" type="video/webm">
+            <source src="movie.ogg" type="video/ogg">
+        <!--embed: swf 파일을 실행함
+            audio: audio 파일을 실행함
+                autoplay: 자동 실행
+                controls: 볼륨 및 실행 조작
+                loop: 무한반복
+            video:video 파일을 실행함
+                autoplay: 자동 실행
+                controls: 볼륨 및 실행 조작
+                source: 소스
+                type: 소스의 종류 및 타입 지정-->
+    </body>
+
+</html>
