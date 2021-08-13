@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset = "utf-8"> 
+        <title> 식물원 관람 안내 </title>  
+    </head>
+    <body>
+        <form action="insert.jsp"> <!-- JSP 호출: 테스트 시점엔 없음, 설정시 "name" 으로 설정된 Input 데이터를 JSP에게 전달-->
+            이 름 : <input type="text" name = "name"> <br><!--text 박스를 생성해서 name 변수에 저장-->
+            나 이 : <input type="text" name = "age"> <br><br> <!--text 박스를 생성해서 age 변수에 저장-->
+            비 밀 번 호 : <input type="password" name="pwd"> <br> <!--password 박스를 생성해서 pwd 변수에 저장-->
+            개 인 정 보 : <input type="radio" name = "info" chcked value=1> 공개 <br> 
+                         <input type="radio" name = "info" value=2> 비공개 <br> <!--radio 버튼을 생성해서 "name이 같은 대상 중" 선택받은 대상의 value를 JSP에게 반환(중복선택 불가)-->
+            취미 : <input type="checkbox" name= "habbay1" chcked value="등산"> 등산
+                   <input type="checkbox" name= "habbay2" value="영화감상"> 영화감삼
+                   <input type="checkbox" name= "habbay3" value="독서"> 독서
+                   <input type="checkbox" name= "habbay4" value="음악감삼"> 음악감상 <br><br> <!--checkbox 버튼을 생성해서 선택받은 대상의 value를 JSP에게 반환(중복선택 가능)-->
+            이메일 : <input type="text">@
+                    <select>
+                        <option>선택</option>
+                        <option>naver.com</option>
+                        <option>hanmail.com</option>
+                        <option>gmail.com</option>
+                        <option>직접 입력</option>
+                    </select><br><br> <!--select 버튼을 생성해서 선택지 제공-->
+            자기소개 : <br>
+            <textarea rows = "10" cols = "100" name="testArea"></textarea><br> <!-- textarea 박스를 생성해서 문자열 입력(H 10 / W 100 크기)-->
+            파일첨부 : <input type="file"> #파일을 첨부하시오 <br><br> <!-- file 버튼을 생성해서 파일 업로드-->
+
+            <button type="button">검색</button><!--button을 생성해서 다른 작업으로 이동 또는 전달-->
+            <button type="submit">전송*확인</button><!--submit을 생성해서 전송(JSP)(form전체 적용)-->
+            <button type="reset">다시쓰기</button><!--reset을 생성해서 모든 입력값 초기화(form전체 적용)-->
+        </form>
+    </body>
+
+</html>
